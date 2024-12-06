@@ -17,6 +17,8 @@ const prevSlide = () => {
   currentIndex.value =
     (currentIndex.value - 1 + slides.value.length) % slides.value.length;
 };
+
+//#606C38
 </script>
 
 <template>
@@ -25,8 +27,17 @@ const prevSlide = () => {
       class="slider-track"
       :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
     >
-      <div class="slide" v-for="(slide, index) in slides" :key="index">
-        <img :src="slide" alt="Slide Image" />
+<!--      <div class="slide" v-for="(slide, index) in slides" :key="index">-->
+<!--        <img :src="slide" alt="Slide Image" />-->
+<!--      </div>-->
+      <div class="slide" :key="1">
+        <img src='../assets/pexels-andreaedavis-27065116.jpg' alt="Slide Image" />
+      </div>
+      <div class="slide" :key="2">
+        <img src='../assets/pexels-cristian-rojas-8447895.jpg' alt="Slide Image" />
+      </div>
+      <div class="slide" :key="3">
+        <img src='../assets/pexels-curtis-adams-1694007-7601183.jpg' alt="Slide Image" />
       </div>
     </div>
     <button class="prev" @click="prevSlide">←</button>
@@ -95,17 +106,18 @@ button {
   left: 50%;
   transform: translateX(-50%);
   gap: 10px;
+  cursor: pointer;
 }
 
 .indicator-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: rgba(197, 113, 113, 0.5);
+  background-color: #687281;
   transition: background-color 0.3s ease;
 }
 
 .indicator-dot.active {
-  background-color: rgb(255, 109, 109);
+  background-color: #606C38;
 }
 </style>

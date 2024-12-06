@@ -28,7 +28,7 @@
 .header-logo {
   width: 190px;
   height: 40px;
-
+  position: relative;
 }
 
 a {
@@ -44,8 +44,8 @@ a {
 
 .header-logo img {
   position: absolute;
-  top: -5px;
-  left: 54px;
+  top: -41px;
+  left: -35px;
   width: 150px;
 }
 

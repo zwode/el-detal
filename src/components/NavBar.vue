@@ -20,7 +20,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 15px;
-  background: #2c3e50;
+  background: #606C38;
   color: #fff;
 }
 

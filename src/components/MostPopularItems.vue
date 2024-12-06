@@ -51,6 +51,7 @@
   text-align: center;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+  border: 0.1px solid gray;
 }
 
 .view-item:hover {

@@ -79,7 +79,7 @@
 <style scoped>
 .feedback-block {
   padding: 20px 30px;
-  width: 33%;
+  width: 33.4%;
   background: #fff;
   border: 0.1px solid #777;
   transition: all 0.2s ease-in-out;

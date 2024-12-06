@@ -57,11 +57,16 @@ img {
 .custom-button {
   margin-top: 20px;
   cursor: pointer;
-  background-color: #2c3e50;
+  background-color: #606C38;
   padding: 15px 25px;
   font-size: 16px;
   color: #fff;
   border: none;
+  transition: 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #6f4518;
 }
 
 .custom-info {

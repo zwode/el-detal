@@ -1,105 +1,63 @@
 <template>
-  <div>
-    <div class="card-title">
-      Купить ХДФ и ЛХДФ Кроношпан
-    </div>
-    <div class="d-flex">
-      <img src="../assets/hdf.jpg" class="card-img" />
-      <div class="card-body">
-        <div class="card-text">
-          ХДФ плита производства Кроношпан - это древесноволокнистая плита высокой плотности. Плиты ХДФ производят следующим образом: измельченные древесные волокна прессуют горячим методом. Древесные волокна , которые применяются для производства плит, изготавливают из экологически чистых продуктов санитарной вырубки. Плиты ХДФ шлифуются , плиты ЛХДФ покрываются декоративным покрытием.
-<br>
-          Производство мебели из плит ХДФ (декоративные мебельные фасады), отделка и дизайн интерьера, отделка полов – (ламинированные полы) стеновые панели. ХДФ плиты применимы при изготовлении и производстве различных профилей, столешниц. Стоит отметит
+  <div class="list-group">
+    <div class="d-flex justify-content-between">
+      <div>
+        Вид:
+      </div>
+      <div class="d-flex">
+        <div class="select-view" :class="{ 'active': isActive }" @click="changeView()">
+          <img src="@/assets/plita.png" alt="plate">
         </div>
-        <div>
-
+        <div class="select-view" :class="{ 'active': !isActive }" @click="changeView()">
+          <img src="@/assets/table.png" alt="table">
         </div>
       </div>
     </div>
-    <div class="card-title">
-      Таблица цен:
+    <div v-if="viewStatus">
+      <CardItem />
     </div>
-    <div class="card-table">
-      <table>
-        <tr>
-          <th>размер листа</th>
-          <th>толщина листа</th>
-          <th>цена за кв.м</th>
-          <th>цена за лист</th>
-          <th>цена за палету</th>
-          <th>цена за фуру</th>
-        </tr>
-        <tr>
-          <td>2800х2070</td>
-          <td>3 мм</td>
-          <td>143 руб</td>
-          <td>829 руб</td>
-          <td>124 324 руб</td>
-          <td>994 594 руб</td>
-        </tr>
-      </table>
-    </div>
-    <div class="product-list">
-      <div class="product">
-        <div class="product-img">
-          <img src="../assets/testimg.jpg">
-        </div>
-        <div class="product-body">
-          За Кв.м:143
-        </div>
-      </div>
+    <div v-else>
+      <TableItem />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import CardItem from '@/components/CardItem.vue'
+import TableItem from '@/components/TableItem.vue'
+import { ref } from 'vue'
+import type { Ref } from 'vue'
 
+const viewStatus: Ref <boolean> = ref(true)
+const isActive: Ref<boolean> = ref(true)
+
+function changeView(): void {
+  viewStatus.value = !viewStatus.value;
+  isActive.value = !isActive.value
+}
 </script>
 
 <style scoped>
 
-.d-flex {
-  display: flex;
-  justify-content: space-around;
+.select-view {
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid transparent;
 }
 
-.card-img {
-  width: 250px;
-  height: 250px;
+.select-view:hover {
+  transform: scale(1.05);
+  border: 1px solid #606C38;
 }
 
-.card-body {
-  margin-left: 1rem;
+.select-view.active {
+  border: 1px solid #606C38;
 }
 
-.card-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  margin-top: 1rem;
-}
-
-.card-text {
-  max-width: 600px;
-}
-
-
-table, th, td {
-  border: 1px solid;
-}
-
-th, td {
-  padding: 5px
-}
-
-table {
-  width: 100%;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.product-list {
-  margin-top: 3rem;
+.select-view img {
+  width: 25px;
+  height: 25px;
 }
 
 </style>

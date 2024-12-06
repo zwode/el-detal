@@ -18,13 +18,42 @@ a,
     display: flex;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.mr-1 {
+    margin-right: 1rem;
+}
+
+.text-align-left {
+    text-align: left!important;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
 .mt-2 {
     margin-top: 2rem;
+}
+
+.font-weight-bold {
+    font-weight: 700;
 }
 
 .custom-block {
     padding: 40px;
     background: #ffffff;
+    transition: 0.3s;
+}
+
+.custom-block:hover {
+    transform: scale(1.05);
 }
 
 .align-self-center {
