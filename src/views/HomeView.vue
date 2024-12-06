@@ -12,7 +12,6 @@ import selectAnimaitedItem from '@/components/selectAnimaitedItem.vue'
 
 <template>
   <main>
-    <HeaderCustom />
     <NavBar />
     <SliderItem />
     <AboutCompany />
@@ -22,6 +21,5 @@ import selectAnimaitedItem from '@/components/selectAnimaitedItem.vue'
     <div class="mt-2">
 
     </div>
-    <FooterCustom />
   </main>
 </template>

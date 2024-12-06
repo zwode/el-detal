@@ -1,7 +1,7 @@
 <template>
-  <div class="list-group">
+  <div class="list-group mt-2">
     <div class="d-flex justify-content-between">
-      <div>
+      <div class="font-weight-bold align-self-center">
         Вид:
       </div>
       <div class="d-flex">

@@ -1,6 +1,8 @@
 <template>
-  <div>
+  <div class="filter">
+    <div class="d-flex">
 
+    </div>
   </div>
 </template>
 

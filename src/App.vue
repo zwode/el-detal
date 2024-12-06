@@ -1,9 +1,15 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import HeaderCustom from '@/components/HeaderCustom.vue'
+import FooterCustom from '@/components/FooterCustom.vue'
 </script>
 
 <template>
-  <RouterView />
+  <div>
+    <HeaderCustom />
+    <RouterView />
+    <FooterCustom />
+  </div>
 </template>
 
 <style scoped>
